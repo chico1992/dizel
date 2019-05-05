@@ -5,19 +5,21 @@ import dizelAudio from "./static/dizel.aac";
 export const Dizel = () => {
     const audioRef = useRef();
     const handleStart = () => {
-        audioRef.current.play();
-        audioRef.current.loop = true;
-        window.navigator.vibrate(1000);
-        console.log(audioRef);
+        if (audioRef.current) {
+            audioRef.current.play().catch(error => {
+                console.log(error);
+            });
+            audioRef.current.loop = true;
+            window.navigator.vibrate(1000);
+        }
     };
     const handleStop = () => {
-        audioRef.current.currentTime = 0;
-        audioRef.current.pause();
-        // audioRef.currentTime = 0;
-        window.navigator.vibrate(0);
-        console.log(audioRef);
+        if (audioRef.current) {
+            audioRef.current.currentTime = 0;
+            audioRef.current.pause();
+            window.navigator.vibrate(0);
+        }
     };
-    console.log(audioRef);
     return (
         <>
             <h1
