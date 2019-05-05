@@ -2,10 +2,10 @@
 
 small app using:
 
-    - react
-    - yarn
-    - the audio api
-    - vibrate api
+-   react
+-   yarn
+-   the audio api
+-   vibrate api
 
 ```
     // to run the dev server
