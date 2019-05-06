@@ -1,3 +1,4 @@
+import { css } from "@emotion/core";
 import React, { useRef } from "react";
 
 import dizelAudio from "./static/dizel.aac";
@@ -24,6 +25,16 @@ export const Dizel = () => {
     return (
         <>
             <h1
+                css={css`
+                    color: red;
+                    font-size: 60px;
+                    display: block;
+                    transition-duration: 1s;
+
+                    :hover {
+                        transform: rotate(180deg);
+                    }
+                `}
                 onMouseEnter={handleStart}
                 onTouchStart={handleStart}
                 onMouseLeave={handleStop}

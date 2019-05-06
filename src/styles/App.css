@@ -4,14 +4,3 @@
     left: 50vw;
     transform: translate(-50%, -50%);
 }
-
-h1 {
-    color: red;
-    font-size: 60px;
-    display: block;
-    transition-duration: 1s;
-}
-
-h1:hover {
-    transform: rotate(180deg);
-}

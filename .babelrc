@@ -1,4 +1,14 @@
+/* eslint-disable */
 {
-    "plugins": ["react-hot-loader/babel"],
-    "presets": ["@babel/env", "@babel/preset-react"]
+    "plugins": ["react-hot-loader/babel", "emotion"],
+    "presets": [
+        [
+            "@emotion/babel-preset-css-prop",
+            {
+                "autoLabel": true,
+                "labelFormat": "[local]"
+            }
+        ],
+        "@babel/env"
+    ]
 }
