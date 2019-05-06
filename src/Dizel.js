@@ -7,6 +7,7 @@ export const Dizel = () => {
     const handleStart = () => {
         if (audioRef.current) {
             audioRef.current.play().catch(error => {
+                // eslint-disable-next-line no-console
                 console.log(error);
             });
             audioRef.current.loop = true;
