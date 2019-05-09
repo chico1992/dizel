@@ -2,10 +2,18 @@
 
 # Dizel app
 
-small app using:
+## This is actually a react boilerplate app
+
+using:
 
 -   react
 -   yarn
+-   typescript
+-   emotion
+-   eslint
+-   prettier
+-   babel
+-   webpack
 -   the audio api
 -   vibrate api
 
