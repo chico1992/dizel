@@ -1,13 +1,13 @@
 import { css } from "@emotion/core";
 import React, { useRef } from "react";
 
-import dizelAudio from "./static/dizel.aac";
+const dizel: string = require("./static/dizel.aac");
 
 export const Dizel = () => {
-    const audioRef = useRef();
+    const audioRef = useRef<HTMLAudioElement>(null);
     const handleStart = () => {
-        if (audioRef.current) {
-            audioRef.current.play().catch(error => {
+        if (audioRef && audioRef.current) {
+            audioRef.current.play().catch((error: any) => {
                 // eslint-disable-next-line no-console
                 console.log(error);
             });
@@ -16,7 +16,7 @@ export const Dizel = () => {
         }
     };
     const handleStop = () => {
-        if (audioRef.current) {
+        if (audioRef && audioRef.current) {
             audioRef.current.currentTime = 0;
             audioRef.current.pause();
             window.navigator.vibrate(0);
@@ -42,7 +42,7 @@ export const Dizel = () => {
             >
                 Dizel ?
             </h1>
-            <audio ref={audioRef} src={dizelAudio} />
+            <audio ref={audioRef} src={dizel} />
         </>
     );
 };
